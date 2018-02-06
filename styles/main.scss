@@ -1,2 +1,25 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "node_modules/materialize-css/sass/materialize";
+
+.map-div {
+	height: 50vh;
+	padding-top: 0 0.75rem;
+}
+
+.no-tabs-css {
+	display: block;
+	height: auto;
+	white-space: unset;
+}
+
+.no-tabs-css>.no-tab-css {
+	line-height: unset;
+	height: auto;
+	text-transform: none;
+	margin: auto auto 20px;
+}
+
+.no-tabs-css>.no-tab-css>.block {
+	display: block;
+}
