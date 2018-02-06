@@ -1,0 +1,25 @@
+{
+  "name": "dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build-css": "node-sass --include-path scss styles/main.scss public/stylesheets/style.css",
+    "watch-css": "nodemon -e scss -x npm run build-css",
+    "dev": "npm run start & npm run watch-css"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "materialize-css": "^0.100.2",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.12"
+  }
+}
