@@ -8,29 +8,35 @@
         <div class="col s3">
             <ul class="tabs no-tabs-css">
                 <li class="no-tab-css row tab ">
-                    <a class="block center card blue-grey darken-1" href="#test1">
+                    <a class="block center card blue-grey darken-1">
                         <div class="card-content white-text">
                             <i class="material-icons">flash_on</i>
-                            <p>Speeds up development</p>
-                            <p class="light center">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.</p>
+                            <p><u>The Status Quo</u></p>
+                            <p class="light center">
+                                Public transportation is stuck in an archaic era. In the age of the internet, things are still decided upon and scheduled manually, and vehicles' locations not tracked.
+                            </p>
                         </div>
                     </a>
                 </li>
                 <li class="no-tab-css row tab ">
-                    <a class="block center card blue-grey darken-1" href="#test2">
+                    <a class="block center card blue-grey darken-1">
                         <div class="card-content white-text">
-                            <i class="material-icons">group</i>
-                            <p>User Experience Focused</p>
-                            <p class="light center">By utilizing elements and principles of Material Design, we were able to create a framework that focuses on User Experience.</p>
+                            <i class="material-icons">polymer</i>
+                            <p><u>Enter Falcon</u></p>
+                            <p class="light center">
+                                Falcon presents an ecosystem wherein the latency, costs, and mishaps are greatly reduced through systematic elimination of manual work and human error.
+                            </p>
                         </div>
                     </a>
                 </li>
                 <li class="no-tab-css row tab ">
-                    <a class="block center card blue-grey darken-1" href="#test3">
+                    <a class="block center card blue-grey darken-1">
                         <div class="card-content white-text">
-                            <i class="material-icons">settings</i>
-                            <p>Easy to work with</p>
-                            <p class="light center">We have provided detailed documentation as well as specific code examples to help new users get started.</p>
+                            <i class="material-icons">account_circle</i>
+                            <p><u>On the Shoulders of Giants</u></p>
+                            <p class="light center">
+                                Every public vehicle can be tracked and managed by Falcon to ensure smooth movement and prevent accidents, saving lives, time, and costs. 
+                            </p>
                         </div>
                     </a>
                 </li>
@@ -39,9 +45,15 @@
 
         <div class="col s9">
             <%- include map.ejs %>
-            <div id="test1" class="row s12">Test 1</div>
-            <div id="test2" class="row s12">Test 2</div>
-            <div id="test3" class="row s12">Test 3</div>
+            <div id="test1" class="row s12" style="background: #55c8ff; font-size: 30px; padding-left: 10px; margin-left: 10px; color: #ffffff">The Heatmap</div>
+            <div id="test2" class="row s12" style="margin-left: 10px">
+                <div class="card-panel light-grey ligthen-3">
+                    <p>Falcon analyzes the routes you input, and predicts the probability of collision between the trains running as per the given schedule.</p>
+
+                    <p>This information would provide a huge benefits in terms of allwoing the relevant authoritied to focus their efforts on areas more prone to accidents.</p>
+
+                </div> 
+            </div>
         </div>
     </div>
     <%- include footer.ejs %>
