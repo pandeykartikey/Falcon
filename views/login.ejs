@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<%- include head.ejs %>
+
+    <body>
+        <%- include navbar.ejs %>
+            <div class="row ">
+                <form class="col s8 m6 l4 card card-form">
+                	<div class="row">
+                        <div class="input-field col s12">
+														<i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                        <div class="input-field col s12">
+                        		<i class="material-icons prefix">https</i>
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s12">
+                        		<i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                  </div>
+                  <div class="row">
+                  <button class="btn waves-effect waves-light button-right" type="submit" name="action">Submit
+    								<i class="material-icons right">send</i>
+  								</button>
+  								</div>
+                </form>
+            </div>
+            <%- include footer.ejs %>
+    </body>
+
+</html>
