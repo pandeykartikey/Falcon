@@ -5,7 +5,7 @@
 //routeExists stores whether a route between two stations exists
 //usingRoute is a 2d array that will store whether a route is being used or not
 
-function createArray(length) {
+window.createArray = function(length) {
     var arr = new Array(length || 0),
         i = length;
 
@@ -40,13 +40,13 @@ while(trains!=0){
 
         else if(running){
             json[i].time[0] -= 1;
-            if(json[i].time[0] === 0){
+            if(json[i].time[0] == 0){
                 usingRoute[station1][station2] = false;
                 json[i].time.splice(0,1);
                 json[i].stations.splice(0,1);
                 json[i].running = false;
                 console.log("train with id " + json[i].id + " stopped at " + station1);
-                if(json[i].stations.length === 1){
+                if(json[i].stations.length == 1){
                     trains -=1;
                     delete json[i];
                 }
