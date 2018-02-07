@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    object = {
+  object = {
         train: [{
                 name: 'ASDdas',
                 num: '12231',
@@ -46,7 +46,7 @@ router.get('/', function(req, res, next) {
             }
         ]
     };
-    res.render('index', object);
+  res.render('userSchedule', object);
 });
 
 module.exports = router;

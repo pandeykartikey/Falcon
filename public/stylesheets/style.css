@@ -6915,7 +6915,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .map-div {
   height: 50vh;
-  padding-top: 0 0.75rem; }
+  margin: 0.75rem 0 1rem 0;
+  padding: 0 0.75rem; }
 
 .no-tabs-css {
   display: block;
@@ -6930,3 +6931,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .no-tabs-css > .no-tab-css > .block {
   display: block; }
+
+.row > .card-form {
+  float: unset;
+  margin: 5.75rem auto;
+  padding: 0.75rem; }
+
+.row > .button-right {
+  position: absolute;
+  right: 0;
+  margin-top: -0.75rem;
+  margin-right: 1.5rem; }
