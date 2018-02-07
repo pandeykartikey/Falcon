@@ -48,6 +48,39 @@ var train = <%- JSON.stringify(train) %>;
                 <div class="col s9">
                     <%- include map.ejs %>
                         <div id="test1" class="row">
+                          <div class="col s12">
+                                <div class="card-panel light-grey ligthen-3">
+                                        <table class="striped">
+                                            <thead>
+                                              <tr>
+                                                  <th>Timestamp</th>
+                                                  <th>Train No.</th>
+                                                  <th>Status</th>
+                                                  <th>Latitude</th>
+                                                  <th>Longitude</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                               <tr>
+                          <td>10:33:41; 19/1/18</td><td>29384</td><td>Running</td><td>12.234</td><td>43.324</td>
+                        </tr>
+                        <tr>
+                          <td>10:37:21; 19/1/18</td><td>56545</td><td>Stopped</td><td>98.846</td><td>95.213</td>
+                        </tr>
+                        <tr>
+                          <td>10:40:45; 19/1/18</td><td>87972</td><td>Running</td><td>66.555</td><td>43.155</td>
+                        </tr>
+                        <tr>
+                          <td>10:41:04; 19/1/18</td><td>13232</td><td>Running</td><td>56.499</td><td>49.2156</td>
+                        </tr>
+                        <tr>
+                          <td>10:49:17; 19/1/18</td><td>54554</td><td>Stopped</td><td>32.124</td><td>65.544</td>
+                        </tr>                                 
+                                                
+                                            </tbody>
+                                          </table>
+                                </div>
+                            </div>
                         </div>
                         <div id="test2" class="row s12">
                             <div class="col s12">
@@ -99,6 +132,7 @@ var train = <%- JSON.stringify(train) %>;
                         </div>
                 </div>
             </div>
+
             <%- include footer.ejs %>
     </body>
 
