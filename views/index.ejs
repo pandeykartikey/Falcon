@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+    <script type="text/javascript"> 
+        var station = <%- JSON.stringify(station) %>;
+        var train = <%- JSON.stringify(train) %>;
+    </script>
     <%- include head.ejs %>
     <script type='text/javascript' src='/scripts/map.js'></script>
 <body>

@@ -6915,7 +6915,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .map-div {
   height: 50vh;
-  padding-top: 0 0.75rem; }
+  margin-top: 0.75rem; }
 
 .no-tabs-css {
   display: block;

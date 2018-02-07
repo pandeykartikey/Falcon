@@ -1,14 +1,21 @@
 var map;
-var pushpin = [];
 var index = 0;
+
+var color = ['blue', 'red', 'green', 'pink', 'yellow']; 
+
 function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
-	addPushPin({
-		latitude: 29.94879913330079,
-		longitude: 77.89939880371088,
-		num: '12231'
-	});
-
+    for( i=0; i<station.length; i++) {
+        addStations(station[i]);
+    }
+    for(i=0; i<train.length; i++) {
+        locations = [];
+        for(j=0; j<train[i].path.length; j++) {
+            console.log(train[i].path[j]);
+            locations.push(new Microsoft.Maps.Location(station[train[i].path[j]].latitude, station[train[i].path[j]].longitude)) 
+        }
+        addPolyline(locations, color[i]);
+    }
 }
 
 function addStations(station) {
@@ -23,9 +30,8 @@ function addStations(station) {
     map.entities.push(pushpin);
 }
 
-function addPolyline(path) {
-    var polyline = new Microsoft.Maps.Polyline([new Microsoft.Maps.Location(path.latitude1, path.longitude1),
-                new Microsoft.Maps.Location(path.latitude, path.longitude2)], null));
+function addPolyline(path, color) {
+    var polyline = new Microsoft.Maps.Polyline(path,{ strokeColor: color, strokeThickness: 3});
     map.entities.push(polyline);
 }
 // train = {latitude, longitude, num}
@@ -48,13 +54,3 @@ window.addEventListener('load',
   function() { 
 	loadMapScenario();
   }, false);
-
-function userInput() {
-	Microsoft.Maps.Events.addHandler(map, 'click', function (mouseEvent) {
-    	//TODO: alert for train number
-    	console.log(mouseEvent.location);
-    	//TODO: Add a pushpin in map
-    	//TODO: Add a pushpin in table
-    	//TODO: Add an on click handler on push pin to remove it 
-	});
-}
