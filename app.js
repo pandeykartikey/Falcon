@@ -12,6 +12,7 @@ var entry = require('./routes/entry');
 var train = require('./routes/train');
 var heatmap = require('./routes/heatmap');
 var login = require('./routes/login');
+var userSchedule = require('./routes/userSchedule');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/entry', entry);
 app.use('/train', train);
 app.use('/heatmap', heatmap);
 app.use('/login', login);
+app.use('/userSchedule', userSchedule);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

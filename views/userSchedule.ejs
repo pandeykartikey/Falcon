@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+  var station = <%- JSON.stringify(station) %>;
+  var train = <%- JSON.stringify(train) %>;
+</script>
+<%- include head.ejs %>
+
+<body>
+  <%- include navbar.ejs %>
+  <div class="row ">
+    <form class="col s12">
+      <div class="row">
+        <% for(var i=0; i < train.length; i++) { %>
+        <div class="card horizontal">
+          <div class="col s4">
+            <p>
+              <%- train[i].name %>
+            </p>
+            <p>
+              <%- train[i].num %>
+            </p>
+          </div>
+          <div class="col s8">
+              <% for(var j=0; j < train[i].path.length; j++) { %>
+            <div>
+              <div class="input-field col s4 card card-form">
+                <input id="<%- train[i].num %>-<%- station[train[i].path[j]].num%>" type="text" class="validate">
+                <label for="<%- train[i].num %>-<%- station[train[i].path[j]].num%>">
+                  <%- station[train[i].path[j]].num%>
+                </label>
+              </div>
+            </div>
+              <% } %>
+          </div>
+        </div>
+      <% } %>
+    </div>
+      <div class="row">
+        <button class="btn waves-effect waves-light button-right" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+  </div>
+  <%- include footer.ejs %>
+</body>
+
+</html>
