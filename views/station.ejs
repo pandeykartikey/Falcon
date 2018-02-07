@@ -1,0 +1,32 @@
+<html>haieheihiaelefi
+ <%- include head.ejs %>
+ <script type='text/javascript' src='/scripts/user.js'></script>
+<body>
+    <%- include navbar.ejs %>
+    <form name="form1" method="POST" action="/station/add">
+    <table>
+        <tr>
+        <td>username</td>
+        <td><input type="text" name="station_name" ></td>
+        </tr>
+        <tr>
+        <td>password</td>
+        <td><input type="text" name="station_code" ></td>
+        </tr>
+        <tr>
+        <td>password</td>
+        <td><input type="text" name="station_long" ></td>
+        </tr>
+        <tr>
+        <td>password</td>
+        <td><input type="text" name="station_lat" ></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>
+    </form>   
+
+</body>
+ <%- include footer.ejs %>
+</html>

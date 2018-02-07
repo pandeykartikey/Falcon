@@ -37,3 +37,20 @@
 	margin-top: -0.75rem;
 	margin-right: 1.5rem;
 }
+
+.heading {
+	margin: 0.75rem 0 1rem 0;
+	padding: 0 0.75rem;
+	color: dark-grey;
+	font-size: 1.75rem;
+}
+
+.relative {
+	position: relative;
+}
+
+.button-top-right {
+	position: absolute;
+	top: -1.5rem;
+	right: 0;
+}
