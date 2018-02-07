@@ -8,8 +8,26 @@ function loadMapScenario() {
 		longitude: 77.89939880371088,
 		num: '12231'
 	});
+
 }
 
+function addStations(station) {
+    var pushpin = new Microsoft.Maps.Pushpin(
+    { 
+        latitude: station.latitude,
+        longitude: station.longitude 
+    },
+    { 
+        title: station.num 
+    });
+    map.entities.push(pushpin);
+}
+
+function addPolyline(path) {
+    var polyline = new Microsoft.Maps.Polyline([new Microsoft.Maps.Location(path.latitude1, path.longitude1),
+                new Microsoft.Maps.Location(path.latitude, path.longitude2)], null));
+    map.entities.push(polyline);
+}
 // train = {latitude, longitude, num}
 function addPushPin(train) {
     pushpin.push(new Microsoft.Maps.Pushpin(
