@@ -75,10 +75,11 @@ function submitStations() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-        // Typical action to be performed when the document is ready:
-            localStorage.setItem('dashboard_stations', JSON.stringify(this.response));
+            localStorage.setItem('dashboard_stations', JSON.stringify(data));
+            window.location = "/train";
         }
     };
     xhttp.open("POST", "/entry", true);
-    xhttp.send({data: data});
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.send(JSON.stringify(data));
 }

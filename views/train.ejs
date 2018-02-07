@@ -38,10 +38,30 @@
         </div>
 
         <div class="col s9">
+            <div class="heading">
+                Create a paths for train
+            </div>
             <%- include map.ejs %>
-            <div id="test1" class="row s12">Test 1</div>
-            <div id="test2" class="row s12">Test 2</div>
-            <div id="test3" class="row s12">Test 3</div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s6">
+                        <button class="btn waves-effect waves-light button-left" type="submit" onclick="submitTrainFinal()">Submit &amp; Go
+                        <i class="material-icons button-right">send</i>
+                        </button>   
+                        </div>
+                        <div class="col s6">
+                        <button class="btn waves-effect waves-light button-right" type="submit" onclick="submitTrain()">Submit
+                        <i class="material-icons button-right">send</i>
+                    </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-panel light-grey ligthen-3">
+                        Instructions to go here                                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <%- include footer.ejs %>
