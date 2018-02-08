@@ -4,10 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var util = require('util');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var station = require('./routes/station');
 var entry = require('./routes/entry');
 var train = require('./routes/train');
 var heatmap = require('./routes/heatmap');
@@ -29,7 +28,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/entry', entry);
 app.use('/train', train);
 app.use('/heatmap', heatmap);
@@ -53,5 +51,4 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 module.exports = app;

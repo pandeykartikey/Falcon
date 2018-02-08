@@ -49,8 +49,8 @@ function getId(location) {
 
 function userInput() {
 	Microsoft.Maps.Events.addHandler(map, 'click', function (mouseEvent) {
-		var value = prompt('Enter number');
-		var name = prompt('Enter name');
+		var name = prompt('Enter station name');
+        var value = prompt('Enter station code');
     	idx = addPushPin({
     		latitude: mouseEvent.location.latitude,
 	    	longitude: mouseEvent.location.longitude, 
@@ -69,4 +69,17 @@ function userInput() {
 			fixIndex(idx1);
     	});
 	});
+}
+
+function submitStations() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            localStorage.setItem('dashboard_stations', JSON.stringify(data));
+            window.location = "/train";
+        }
+    };
+    xhttp.open("POST", "/entry", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.send(JSON.stringify(data));
 }

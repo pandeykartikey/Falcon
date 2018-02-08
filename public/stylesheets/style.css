@@ -6918,6 +6918,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin: 0.75rem 0 1rem 0;
   padding: 0 0.75rem; }
 
+nav {
+  background-color: #55c8ff !important; }
+
+.brand-logo {
+  margin-left: 1.5rem; }
+
 .no-tabs-css {
   display: block;
   height: auto;
@@ -6940,5 +6946,23 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .row > .button-right {
   position: absolute;
   right: 0;
+  margin-top: -0.75rem;
+  margin-right: 1.5rem; }
+
+.heading {
+  margin: 0.75rem 0 1rem 0;
+  padding: 0 0.75rem;
+  color: dark-grey;
+  font-size: 1.75rem; }
+
+.relative {
+  position: relative; }
+
+.button-top-right {
+  position: absolute;
+  top: -1.5rem;
+  right: 0; }
+
+.row > .button-right {
   margin-top: -0.75rem;
   margin-right: 1.5rem; }

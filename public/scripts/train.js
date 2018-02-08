@@ -1,27 +1,4 @@
-station =  [{
-    latitude: 29.897321866263027,
-    longitude: 77.81305313110346,
-    name: "asdf",
-    num: "RK"
-},
-{
-    latitude: 29.949096612364364,
-    longitude: 77.93321609497065,
-    name: "123",
-    num: "LK"
-},
-{
-    latitude: 29.976460878565426,
-    longitude: 77.83227920532221,
-    name: "123",
-    num: "asd"
-},
-{
-    latitude: 30.006196098360498,
-    longitude: 77.75606155395502,
-    name: "123",
-    num: "123"
-}];
+station = JSON.parse(localStorage.getItem('dashboard_stations'));
 
 var map;
 var polyline = [];
@@ -104,4 +81,47 @@ function fixIndex(idx){
     polyline.splice(idx, 1);
     data.splice(idx, 1);
     index--;
+}
+
+function submitTrainFinal() {
+    var name = prompt('Enter train name');
+    var value = prompt('Enter train no.');
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            removePolylineAll();
+            window.location = "/";
+        }
+    };
+    xhttp.open("POST", "/train", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    data.name = name;
+    data.value = value;
+    xhttp.send(JSON.stringify(data));
+    data=[];
+    index=0;
+}
+
+function submitTrain() {
+    var name = prompt('Enter train name');
+    var value = prompt('Enter train no.');
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            removePolylineAll();
+        }
+    };
+    xhttp.open("POST", "/train", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    data.name = name;
+    data.value = value;
+    xhttp.send(JSON.stringify(data));
+    data=[];
+    index=0;
+}
+
+function removePolylineAll() {
+    for(i=0; i<index; i++) {
+        map.entities.removeAt(station.length + i);
+    }
 }
