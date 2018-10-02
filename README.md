@@ -2,7 +2,7 @@
 
 [Falcon](http://falcon.westus2.cloudapp.azure.com:8080/) is a public transport management ecosystem which paves the way towards unprecedented reduction in accidents, delays and costs.
 
-## Why is Falcon needed
+## Why is Falcon needed?
 * In an age where positioning systems are dirt cheap, we still hear of train collisions, something that can easily be avoided by simply tracking positions. 
 * Scheduling is still done manually. 
 * Traffic lights still use the same timeout for all directions, irrespective of the traffic load. 
@@ -10,7 +10,7 @@
 
 And this is just scratching the surface. There are much more issues that can be solved with Falcon.
 
-## What can be done
+## What can be done?
 Falcon's only requirement is tracking of all vehicles.
   
 Once the trains relay their information to the central server, falcon can, 
